@@ -18,5 +18,5 @@ app.use(proxy(API_TARGET, {
 }));
 
 http.createServer(app).listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
+    console.log(`Listening on port ${PORT}`);
 });
