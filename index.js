@@ -8,7 +8,7 @@ const PORT = process.env.PORT;
 app.use(proxy(API_TARGET, {
     userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
     data = JSON.parse(proxyResData.toString('utf8'));
-    console.log(`${proxyRes.url} [${proxyRes.statusCode}] : ${proxyRes.statusMessage}`);
+    console.log(`${userReq.url} [${proxyRes.statusCode}] : ${proxyRes.statusMessage}`);
 
     let response = data;
     if(Array.isArray(data)) {
